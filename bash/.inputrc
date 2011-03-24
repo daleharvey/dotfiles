@@ -1,0 +1,4 @@
+set show-all-if-ambiguous on
+set expand-tilde on
+set autolist
+set filesc
