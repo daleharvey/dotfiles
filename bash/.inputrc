@@ -1,4 +1,5 @@
 set show-all-if-ambiguous on
 set expand-tilde on
-set -o emacs
-
+set visible-stats
+set completion-ignore-case on
+set mark-symlinked-directories on
