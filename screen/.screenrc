@@ -2,15 +2,20 @@ startup_message off
 defscrollback 2048
 autodetach on
 
-caption always "%{wK}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wK}%?%+Lw%? %= %{= Kw}%110`%109`%111`"
+hardstatus alwayslastline
+hardstatus string "%{wK}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wK}%?%+Lw%? %= %{= Kw}%110`%109`%111` %{G}%H"
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%H-%m-%d %{W}%c %{g}]'
+
+#caption always "%{wK}%?%-Lw%?%{bw}%n*%f %t%?(%u)%?%{wK}%?%+Lw%? %= %{= Kw}%110`%109`%111`"
 
 bindkey ^[, prev
 bindkey ^[; next
 
 #shell zsh
+shelltitle "$ |bash"
 
 bind b eval "writebuf" "exec sh -c 'pbcopy < /tmp/screen-exchange'"
 termcapinfo xterm* ti@:te@
 
-screen -t couchdb 1
-screen -t membase 2
+#screen -t couchdb 1
+#screen -t membase 2
