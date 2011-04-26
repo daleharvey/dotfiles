@@ -1,6 +1,6 @@
 source ~/lib/dotfiles/bash/git-completion.bash
 
-source /Users/daleharvey/lib/dotfiles/bash/bash-completion-1.3/completions/ssh
+#source /Users/daleharvey/lib/dotfiles/bash/bash-completion-1.3/completions/ssh
 source /Users/daleharvey/lib/dotfiles/bash/bash-completion-1.3/completions/make
 
 alias ..='cd ..'

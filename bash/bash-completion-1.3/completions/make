@@ -4,9 +4,8 @@ _make()
     local file makef makef_dir="." makef_inc cur prev i split=false
 
     COMPREPLY=()
-    _get_comp_words_by_ref cur prev
-
-    _split_longopt && split=true
+    #_get_comp_words_by_ref cur prev
+    #_split_longopt && split=true
 
     case $prev in
         -f|-o|-W|--file|--makefile|--old-file|--new-file|--assume-old|--assume-new|--what-if)
@@ -37,23 +36,23 @@ _make()
     else
         # before we check for makefiles, see if a path was specified
         # with -C/--directory
-        for (( i=0; i < ${#COMP_WORDS[@]}; i++ )); do
-            if [[ ${COMP_WORDS[i]} == -@(C|-directory) ]]; then
-                # eval for tilde expansion
-                eval makef_dir=${COMP_WORDS[i+1]}
-                break
-            fi
-        done
+        # for (( i=0; i < ${#COMP_WORDS[@]}; i++ )); do
+        #     if [[ ${COMP_WORDS[i]} == -@(C|-directory) ]]; then
+        #         # eval for tilde expansion
+        #         eval makef_dir=${COMP_WORDS[i+1]}
+        #         break
+        #     fi
+        # done
 
         # before we scan for targets, see if a Makefile name was
         # specified with -f/--file/--makefile
-        for (( i=0; i < ${#COMP_WORDS[@]}; i++ )); do
-            if [[ ${COMP_WORDS[i]} == -@(f|-?(make)file) ]]; then
-                # eval for tilde expansion
-                eval makef=${COMP_WORDS[i+1]}
-                break
-            fi
-        done
+        # for (( i=0; i < ${#COMP_WORDS[@]}; i++ )); do
+        #     if [[ ${COMP_WORDS[i]} == -@(f|-?(make)file) ]]; then
+        #         # eval for tilde expansion
+        #         eval makef=${COMP_WORDS[i+1]}
+        #         break
+        #     fi
+        # done
 
         [ -n "$makef" ] && makef="-f ${makef}"
         [ -n "$makef_dir" ] && makef_dir="-C ${makef_dir}"

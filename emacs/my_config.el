@@ -56,3 +56,6 @@
 ;; Use spaces to indent, 4 by default.
 (setq-default indent-tabs-mode nil)
 (setq js-indent-level 2)
+
+;; Turn on flymake mode
+(add-hook 'find-file-hook 'flymake-find-file-hook)
