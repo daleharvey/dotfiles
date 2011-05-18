@@ -7,7 +7,9 @@
 
 (defun notify-compilation-result(buffer msg)
   "Close compilation buffer if compile is successful"
-  (when (string-match "^finished" msg)
+  (when (and
+         (string-match "^finished" msg)
+         (not (string-match "grep" (buffer-name buffer))))
     (delete-windows-on buffer))
   (setq current-frame (car (car (cdr (current-frame-configuration)))))
   (select-frame-set-input-focus current-frame))
