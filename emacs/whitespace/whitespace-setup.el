@@ -1,6 +1,7 @@
 ;; -*- Mode: Emacs-Lisp -*-
 ;; -*- lisp -*-
 
+(require 'whitespace)
 (provide 'whitespace-setup)
 
 (setq whitespace-style

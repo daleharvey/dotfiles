@@ -10,7 +10,7 @@
 
         (".couchapprc" . (lambda (dir file)
                            (message file)
-                           (compile (concat "cd " dir " && couchapp push"))))))
+                           (compile (concat "cd " dir " && erica push"))))))
 
 (defun compile-helper ()
   (interactive)

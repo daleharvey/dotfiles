@@ -3,20 +3,21 @@
 
 (provide 'my_config)
 
+(setenv "PATH" (concat "~/bin:" (getenv "PATH")))
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 (add-to-list 'exec-path "/usr/local/bin")
 
-(add-to-list 'load-path "~/lib/dotfiles/emacs/custom-keys")
-(add-to-list 'load-path "~/lib/dotfiles/emacs/color-theme")
-(add-to-list 'load-path "~/lib/dotfiles/emacs/compile-helper")
-(add-to-list 'load-path "~/lib/dotfiles/emacs/auto-complete")
-(add-to-list 'load-path "~/lib/dotfiles/emacs/moz")
-(add-to-list 'load-path "~/lib/dotfiles/emacs/erlang")
-(add-to-list 'load-path "~/lib/dotfiles/emacs/http-twiddle")
-(add-to-list 'load-path "~/lib/dotfiles/emacs/jshint-mode")
-(add-to-list 'load-path "~/lib/dotfiles/emacs/markdown")
-(add-to-list 'load-path "~/lib/dotfiles/emacs/whitespace")
-(add-to-list 'load-path "~/lib/dotfiles/emacs/ido")
+(add-to-list 'load-path "~/src/dotfiles/emacs/custom-keys")
+(add-to-list 'load-path "~/src/dotfiles/emacs/color-theme")
+(add-to-list 'load-path "~/src/dotfiles/emacs/compile-helper")
+(add-to-list 'load-path "~/src/dotfiles/emacs/auto-complete")
+(add-to-list 'load-path "~/src/dotfiles/emacs/moz")
+(add-to-list 'load-path "~/src/dotfiles/emacs/erlang")
+(add-to-list 'load-path "~/src/dotfiles/emacs/http-twiddle")
+(add-to-list 'load-path "~/src/dotfiles/emacs/jshint-mode")
+(add-to-list 'load-path "~/src/dotfiles/emacs/markdown")
+(add-to-list 'load-path "~/src/dotfiles/emacs/whitespace")
+(add-to-list 'load-path "~/src/dotfiles/emacs/ido")
 
 (require 'custom-keys)
 (require 'auto-complete-setup)
@@ -58,4 +59,4 @@
 (setq js-indent-level 2)
 
 ;; Turn on flymake mode
-(add-hook 'find-file-hook 'flymake-find-file-hook)
+;(add-hook 'find-file-hook 'flymake-find-file-hook)
