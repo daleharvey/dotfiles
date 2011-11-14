@@ -41,10 +41,15 @@
 (setq visible-bell nil)
 (setq mac-command-modifier 'control)
 
+(menu-bar-mode -1)
+(tool-bar-mode -1)
+(scroll-bar-mode -1)
+
 ;; Stop Making ~ files, get rid of startup message
 (setq inhibit-startup-message 0)
 (setq make-backup-files nil)
 (setq auto-save-default nil)
+
 
 ;; Save sessions and stuff
 (desktop-load-default)
