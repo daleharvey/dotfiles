@@ -7,6 +7,7 @@
 (setenv "PATH" (concat "/usr/local/bin:" (getenv "PATH")))
 (add-to-list 'exec-path "/usr/local/bin")
 
+(add-to-list 'load-path "~/src/dotfiles/emacs/php")
 (add-to-list 'load-path "~/src/dotfiles/emacs/custom-keys")
 (add-to-list 'load-path "~/src/dotfiles/emacs/color-theme")
 (add-to-list 'load-path "~/src/dotfiles/emacs/compile-helper")
@@ -19,6 +20,7 @@
 (add-to-list 'load-path "~/src/dotfiles/emacs/whitespace")
 (add-to-list 'load-path "~/src/dotfiles/emacs/ido")
 
+(require 'php-mode)
 (require 'custom-keys)
 (require 'auto-complete-setup)
 (require 'compile-helper-setup)
