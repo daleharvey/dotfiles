@@ -44,8 +44,8 @@
 (setq mac-command-modifier 'control)
 
 (menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+(if (functionp 'tool-bar-mode) (tool-bar-mode 0))
+(if (functionp 'scroll-bar-mode) (scroll-bar-mode -1))
 
 ;; Stop Making ~ files, get rid of startup message
 (setq inhibit-startup-message 0)
