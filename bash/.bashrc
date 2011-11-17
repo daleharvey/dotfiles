@@ -1,7 +1,10 @@
 export PATH=/usr/local/bin:~/bin:$PATH
 
+export PATH=/usr/local/mysql/:$PATH
 export PATH=~/lib/android-sdk-mac_x86/platform-tools:$PATH
 export PATH=~/lib/android-sdk-mac_x86/tools:$PATH
+
+export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
 
 source ~/src/dotfiles/bash/git-completion.bash
 
