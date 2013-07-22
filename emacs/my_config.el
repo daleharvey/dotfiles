@@ -65,5 +65,7 @@
 (setq-default indent-tabs-mode nil)
 (setq js-indent-level 2)
 
+(setq css-indent-offset 2)
+
 ;; Turn on flymake mode
 ;(add-hook 'find-file-hook 'flymake-find-file-hook)
