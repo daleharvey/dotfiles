@@ -68,4 +68,9 @@
 (setq css-indent-offset 2)
 
 ;; Turn on flymake mode
-;(add-hook 'find-file-hook 'flymake-find-file-hook)
+(add-hook 'find-file-hook 'flymake-find-file-hook)
+
+;; Get rid of annoying prompts
+(setq kill-buffer-query-functions
+ (remove 'process-kill-buffer-query-function
+         kill-buffer-query-functions))
