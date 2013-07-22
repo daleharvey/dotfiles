@@ -1,0 +1,13 @@
+mk_add_options MOZ_OBJDIR=$HOME/src/moz/objdir/firefox-debug
+mk_add_options MOZ_MAKE_FLAGS="-j6 -s"
+mk_add_options AUTOCLOBBER=1
+ac_add_options --enable-debug
+
+ac_add_options --enable-application=browser
+
+ac_add_options --enable-tests
+ac_add_options --with-ccache
+
+export ENABLE_MARIONETTE=1
+export MOZ_PACKAGE_JSSHELL=1
+export MOZ_TELEMETRY_REPORTING=1
