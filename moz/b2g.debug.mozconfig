@@ -1,8 +1,8 @@
 mk_add_options MOZ_OBJDIR=$HOME/src/moz/objdir/b2g-debug
 mk_add_options MOZ_MAKE_FLAGS="-j6 -s"
+mk_add_options AUTOCLOBBER=1
 
 ac_add_options --enable-application=b2g
-
 ac_add_options --enable-tests
 ac_add_options --with-ccache
 ac_add_options --enable-debug
