@@ -1,12 +1,11 @@
 ;; -*- Mode: Emacs-Lisp -*-
 ;; -*- lisp -*-
 
-(require 'whitespace)
+(require 'ws-trim)
 (provide 'whitespace-setup)
 
-(setq whitespace-style
-      '(face tabs trailing lines-tail
-             space-before-tab indentation
-             empty space-after-tab))
-(whitespace-mode 1)
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;(show-ws-toggle-show-trailing-whitespace)
+;(show-ws-toggle-show-tabs)
+
+(global-ws-trim-mode t)
+(set-default 'ws-trim-level 1)
