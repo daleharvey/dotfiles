@@ -1,16 +1,11 @@
 export PATH=/usr/local/bin:~/bin:$PATH
 
-export PATH=/usr/local/mysql/:$PATH
-export PATH=~/lib/android-sdk-mac_x86/platform-tools:$PATH
-export PATH=~/lib/android-sdk-mac_x86/tools:$PATH
-
-export DYLD_LIBRARY_PATH=/usr/local/mysql/lib/
-
 source ~/src/dotfiles/bash/git-completion.bash
 
+export PATH=~/src/git-cinnabar:$PATH
+export PATH=~/src/version-control-tools/git/commands:$PATH
 
-#source /Users/daleharvey/lib/dotfiles/bash/bash-completion-1.3/completions/ssh
-# source /Users/daleharvey/lib/dotfiles/bash/bash-completion-1.3/completions/make
+source ~/.cargo/env
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -25,3 +20,16 @@ export COPY_EXTENDED_ATTRIBUTES_DISABLE=true
 export COPYFILE_DISABLE=true
 
 export PS1='\[\033\\\]\[\033[0;36m\]\w\[\033[0;31m\]$(__git_ps1 " (%s)")\$\[\033[0m\] '
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# added by travis gem
+[ -f /Users/dharvey/.travis/travis.sh ] && source /Users/dharvey/.travis/travis.sh
+
+export CCACHE_COMPRESS=""
+
+export MOZCONFIG=~/src/dotfiles/moz/firefox.mozconfig
